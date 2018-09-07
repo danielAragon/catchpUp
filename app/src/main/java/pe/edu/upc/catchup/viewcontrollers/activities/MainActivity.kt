@@ -44,6 +44,7 @@ class MainActivity : AppCompatActivity() {
     }
 
     private fun navigateTo(item: MenuItem): Boolean{
+        item.setChecked(true)
         return supportFragmentManager
                 .beginTransaction()
                 .replace(R.id.content, fragmentFor(item))
